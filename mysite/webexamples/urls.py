@@ -1,6 +1,6 @@
-from django.conf.urls import path
+from django.urls import path
 from . import views
 
 urlspatterns = [
-    path('^$', views.index, name='index')
+    path('', views.index, name='index')
 ]
