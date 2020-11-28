@@ -2,4 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return render(request, firstapp/homePage.html)
+    return render(request, 'firstapp/index.html')
+
+
+def about(request):
+        return render(request, 'firstapp/about.html')
