@@ -1,10 +1,19 @@
 {% extends 'firstapp/base.html' %}
 
 {% block title %}
-Главная страница
+{{ title }}
 {% endblock %}
 
 {% block content %}
     <h1>Страничка главная</h1>
-    <p>Немного текста</p>
+    {% if tasks %}
+        {% for el in tasks %}
+            <div class="alert alert-warning nt-2">
+                <h3>{{ el.title }}</h3>
+                <p>{{ el.task }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+            <p>У нас нет записей!</p>
+    {% endif %}        
 {% endblock %}
