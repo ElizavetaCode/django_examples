@@ -15,6 +15,7 @@ def about(request):
 def create(request):
     error = ''
     if request.method == 'POST': 
+        error = 'Есть ли пост?' 
         form = TaskForm(request.POST)
         if form.is_valid():
             form.save()
